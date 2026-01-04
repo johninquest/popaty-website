@@ -1,12 +1,13 @@
 {
   "name": "scm-website",
   "type": "module",
-  "version": "0.11.26",
+  "version": "0.1.05",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro", 
+    "deploy": "npm run build && npx wrangler pages deploy dist"
   },
   "dependencies": {
     "astro": "^5.14.5"
