@@ -1,0 +1,505 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import PageTracker from '../../components/PageTracker.astro';
+---
+
+<Layout title="Pricing | SozialCM - Fair & Transparent">
+    <PageTracker pageName="pricing" pageCategory="product" />
+    <Navigation />
+
+    <main>
+        <section class="hero">
+            <h1>Fair Pricing. No Hidden Costs.</h1>
+            <p class="hero-subtext">We're currently in pilot phase. Join us now and get special early access conditions.</p>
+            <span class="pilot-badge">Pilot Phase</span>
+        </section>
+
+        <section class="pricing-intro">
+            <div class="intro-card">
+                <h2>Currently in Pilot Phase</h2>
+                <p>We're actively developing SozialCM together with our pilot partners. During this phase, we offer:</p>
+                <ul class="benefits-list">
+                    <li>Free access to the full platform</li>
+                    <li>Direct influence on feature development</li>
+                    <li>Priority support from our team</li>
+                    <li>Exclusive early adopter pricing after pilot phase</li>
+                </ul>
+                <div class="cta-box">
+                    <p><strong>Limited spots available!</strong></p>
+                    <a href="mailto:hello@caresoftwarelabs.com?subject=SozialCM%20Pilot%20Program" class="button button--primary">Apply for Pilot Program</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="future-pricing">
+            <h2>Future Pricing Model</h2>
+            <p class="section-intro">After the pilot phase, we'll introduce transparent and fair pricing. Here's what we're planning:</p>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Starter</h3>
+                        <p class="card-subtitle">For small teams</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="price-amount">€X</span>
+                        <span class="price-period">per user/month</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>Up to 5 users</li>
+                        <li>Unlimited cases</li>
+                        <li>Basic reports</li>
+                        <li>Email support</li>
+                        <li>Mobile & desktop access</li>
+                    </ul>
+                    <div class="card-footer">
+                        <p class="coming-soon-label">Available after pilot phase</p>
+                    </div>
+                </div>
+
+                <div class="pricing-card pricing-card--featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3>Professional</h3>
+                        <p class="card-subtitle">For growing organizations</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="price-amount">€X</span>
+                        <span class="price-period">per user/month</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>Up to 20 users</li>
+                        <li>Unlimited cases</li>
+                        <li>Advanced reports & analytics</li>
+                        <li>Priority support</li>
+                        <li>Custom fields & tags</li>
+                        <li>Team collaboration features</li>
+                        <li>Export & API access</li>
+                    </ul>
+                    <div class="card-footer">
+                        <p class="coming-soon-label">Available after pilot phase</p>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Enterprise</h3>
+                        <p class="card-subtitle">For large institutions</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="price-amount">Custom</span>
+                        <span class="price-period">Contact us</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>Unlimited users</li>
+                        <li>Unlimited cases</li>
+                        <li>Custom reporting</li>
+                        <li>Dedicated support</li>
+                        <li>Custom integrations</li>
+                        <li>On-premise option</li>
+                        <li>SLA guarantee</li>
+                        <li>Training & onboarding</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="mailto:hello@caresoftwarelabs.com?subject=Enterprise%20Inquiry" class="button button--outline">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>How long does the pilot phase last?</h3>
+                    <p>The pilot phase will run for several months while we develop and refine the platform together with our partners. We'll communicate the timeline openly with all participants.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What happens after the pilot phase?</h3>
+                    <p>Pilot participants will receive exclusive early adopter pricing when we launch commercially. You'll also have the option to continue using the platform or export your data.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is my data safe during the pilot?</h3>
+                    <p>Absolutely. Even in the pilot phase, we maintain the same high security and GDPR compliance standards. Your data is hosted on German servers with enterprise-grade encryption.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I cancel anytime?</h3>
+                    <p>Yes. During the pilot phase, participation is completely voluntary. When we move to paid plans, we'll offer flexible monthly and annual billing options.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Will there be a free plan?</h3>
+                    <p>We're evaluating different pricing models, including a potential free tier for very small organizations. We'll announce details before the end of the pilot phase.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer educational discounts?</h3>
+                    <p>Yes! We offer special pricing for schools and educational institutions. Contact us to discuss your specific needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <h2>Ready to Join the Pilot?</h2>
+            <p>Be part of shaping the future of social work case management.</p>
+            <a href="mailto:hello@caresoftwarelabs.com?subject=SozialCM%20Pilot%20Application" class="button button--primary button--large">Apply Now</a>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>
+
+<style>
+    main { 
+        max-width: 900px; 
+        margin: 0 auto; 
+        padding: 2rem 1rem; 
+        min-height: 100vh;
+        background-color: var(--color-bg-primary);
+    }
+
+    .hero {
+        text-align: center;
+        padding: 4rem 0 2rem 0;
+    }
+
+    h1 { 
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 300; 
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+        letter-spacing: -0.02em;
+    }
+
+    .hero-subtext {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: var(--color-text-secondary);
+        margin: 1rem auto 2rem auto;
+        max-width: 700px;
+        line-height: 1.6;
+    }
+
+    .pilot-badge {
+        display: inline-block;
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 500;
+        background-color: #10b981;
+        color: white;
+    }
+
+    .pricing-intro {
+        margin: 3rem 0;
+    }
+
+    .intro-card {
+        background-color: var(--color-bg-secondary);
+        border: 2px solid var(--color-primary);
+        border-radius: 12px;
+        padding: 2.5rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .intro-card h2 {
+        font-size: 1.75rem;
+        font-weight: 500;
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+        text-align: center;
+    }
+
+    .intro-card > p {
+        color: var(--color-text-secondary);
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.0625rem;
+    }
+
+    .benefits-list {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0;
+    }
+
+    .benefits-list li {
+        color: var(--color-text-secondary);
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+        position: relative;
+        font-size: 1rem;
+    }
+
+    .benefits-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--color-primary);
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    .cta-box {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .cta-box p {
+        color: var(--color-primary);
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .future-pricing {
+        margin: 5rem 0 4rem 0;
+    }
+
+    .future-pricing h2 {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 400;
+        color: var(--color-primary);
+        text-align: center;
+        margin: 0 0 1rem 0;
+    }
+
+    .section-intro {
+        text-align: center;
+        color: var(--color-text-secondary);
+        margin: 1rem auto 3rem auto;
+        max-width: 600px;
+        line-height: 1.7;
+        font-size: 1.0625rem;
+    }
+
+    .pricing-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .pricing-card {
+        background-color: var(--color-bg-secondary);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .pricing-card--featured {
+        border: 2px solid var(--color-primary);
+        transform: scale(1.05);
+    }
+
+    .popular-badge {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-primary);
+        color: white;
+        padding: 0.25rem 1rem;
+        border-radius: 12px;
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+
+    .card-header h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin: 0 0 0.5rem 0;
+    }
+
+    .card-subtitle {
+        color: var(--color-text-secondary);
+        font-size: 0.9375rem;
+        margin: 0;
+    }
+
+    .card-price {
+        margin: 1.5rem 0;
+        padding: 1.5rem 0;
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .price-amount {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: var(--color-primary);
+        line-height: 1;
+    }
+
+    .price-period {
+        display: block;
+        color: var(--color-text-secondary);
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+    }
+
+    .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+        flex-grow: 1;
+    }
+
+    .features-list li {
+        color: var(--color-text-secondary);
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        position: relative;
+        font-size: 0.9375rem;
+    }
+
+    .features-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--color-primary);
+        font-weight: bold;
+    }
+
+    .card-footer {
+        margin-top: auto;
+    }
+
+    .coming-soon-label {
+        text-align: center;
+        color: var(--color-text-secondary);
+        font-size: 0.875rem;
+        font-style: italic;
+        margin: 0;
+    }
+
+    .faq {
+        margin: 5rem 0;
+    }
+
+    .faq h2 {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 400;
+        color: var(--color-primary);
+        text-align: center;
+        margin: 0 0 3rem 0;
+    }
+
+    .faq-list {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .faq-item:last-child {
+        border-bottom: none;
+    }
+
+    .faq-item h3 {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: var(--color-primary);
+        margin: 0 0 0.75rem 0;
+    }
+
+    .faq-item p {
+        color: var(--color-text-secondary);
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .final-cta {
+        text-align: center;
+        padding: 4rem 2rem;
+        background-color: var(--color-bg-secondary);
+        border-radius: 12px;
+        margin: 4rem 0 2rem 0;
+    }
+
+    .final-cta h2 {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 400;
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+    }
+
+    .final-cta p {
+        font-size: 1.125rem;
+        color: var(--color-text-secondary);
+        margin: 0 0 2rem 0;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    .button--primary {
+        background-color: var(--color-primary);
+        color: white;
+    }
+
+    .button--primary:hover {
+        background-color: var(--color-primary-hover);
+    }
+
+    .button--outline {
+        background-color: transparent;
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+    }
+
+    .button--outline:hover {
+        background-color: var(--color-primary);
+        color: white;
+    }
+
+    .button--large {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+    }
+
+    @media (max-width: 768px) {
+        main {
+            padding: 1rem 0.5rem;
+        }
+
+        .hero {
+            padding: 3rem 0 2rem 0;
+        }
+
+        .intro-card {
+            padding: 2rem 1.5rem;
+        }
+
+        .pricing-cards {
+            grid-template-columns: 1fr;
+        }
+
+        .pricing-card--featured {
+            transform: none;
+        }
+
+        .final-cta {
+            padding: 3rem 1.5rem;
+        }
+    }
+</style>

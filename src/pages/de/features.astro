@@ -1,0 +1,227 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import PageTracker from '../../components/PageTracker.astro';
+---
+
+<Layout title="Funktionen - SozialCM">
+    <PageTracker pageName="features" pageCategory="product" />
+    <Navigation />
+
+    <main>
+        <section class="hero">
+            <h1>Funktionen für moderne soziale Arbeit</h1>
+            <p class="hero-subtext">Entdecken Sie, wie SozialCM Ihre tägliche Arbeit vereinfacht und Ihnen mehr Zeit für das Wesentliche gibt.</p>
+        </section>
+
+        <section class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3>Einfache Falldokumentation</h3>
+                <p>Erfassen Sie Fälle schnell und strukturiert. Protokolle, Nachgespräche und Berichte in Minuten erledigt – mit intuitiven Vorlagen und intelligenten Formularen.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Echtzeit-Übersichten</h3>
+                <p>Behalten Sie den Überblick mit Live-Dashboards. Trends, offene Aufgaben und Fortschritte auf einen Blick – für Fachkräfte und Leitungen.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>DSGVO-konform & sicher</h3>
+                <p>Maximale Datensicherheit durch deutsche Server, Ende-zu-Ende-Verschlüsselung und rollenbasierte Zugriffskontrolle. Ihre Daten bleiben in Deutschland.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobil & Desktop</h3>
+                <p>Arbeiten Sie flexibel von überall. Vollständig responsives Design für Desktop, Tablet und Smartphone – synchronisiert in Echtzeit.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Teamarbeit & Übergaben</h3>
+                <p>Nahtlose Zusammenarbeit im Team. Kein Wissen geht verloren – auch bei Personalwechsel oder Urlaubsvertretungen.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Berichte & Statistiken</h3>
+                <p>Erstellen Sie professionelle Berichte mit einem Klick. Statistiken für Fördermittel, Schulträger oder interne Auswertungen automatisch generiert.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Folgetermine & Erinnerungen</h3>
+                <p>Verpassen Sie keinen wichtigen Termin mehr. Automatische Erinnerungen für Nachgespräche, Fristen und Follow-ups.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Kategorien & Filter</h3>
+                <p>Organisieren Sie Fälle nach Themen, Priorität oder Status. Leistungsstarke Filter helfen Ihnen, schnell die richtigen Informationen zu finden.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Bereit, SozialCM zu testen?</h2>
+            <p class="cta-text">Erleben Sie selbst, wie SozialCM Ihre Arbeit vereinfacht.</p>
+            <div class="cta-buttons">
+                <a class="button button--primary" href="mailto:hello@caresoftwarelabs.com?subject=SozialCM%20Pilotprogramm">Pilot-Zugang anfordern</a>
+                <a class="button button--secondary" href="mailto:hello@caresoftwarelabs.com?subject=SozialCM%20Demo">Demo vereinbaren</a>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>
+
+<style>
+    main { 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 2rem 1rem; 
+        min-height: 100vh;
+        background-color: var(--color-bg-primary);
+    }
+
+    .hero {
+        text-align: center;
+        padding: 4rem 0 3rem 0;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 { 
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 300; 
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+        letter-spacing: -0.02em;
+    }
+
+    .hero-subtext {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: var(--color-text-secondary);
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin: 4rem 0;
+    }
+
+    .feature-card {
+        background-color: var(--color-bg-secondary);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 2rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+    }
+
+    .feature-card p {
+        color: var(--color-text-secondary);
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .cta {
+        text-align: center;
+        padding: 4rem 0 2rem 0;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .cta h2 {
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 400;
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+    }
+
+    .cta-text {
+        font-size: 1.125rem;
+        color: var(--color-text-secondary);
+        margin: 0 0 2rem 0;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+        font-size: 1rem;
+    }
+
+    .button--primary {
+        background-color: var(--color-primary);
+        color: white;
+    }
+
+    .button--primary:hover {
+        background-color: var(--color-primary-hover);
+    }
+
+    .button--secondary {
+        background-color: var(--color-bg-secondary);
+        color: var(--color-text-primary);
+        border: 1px solid var(--color-border);
+    }
+
+    .button--secondary:hover {
+        background-color: var(--color-accent);
+    }
+
+    @media (max-width: 768px) {
+        .features-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            padding: 1.5rem;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            width: 100%;
+            max-width: 280px;
+        }
+    }
+</style>

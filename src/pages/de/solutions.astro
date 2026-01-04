@@ -1,0 +1,301 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import PageTracker from '../../components/PageTracker.astro';
+---
+
+<Layout title="Unsere Lösungen | Care Software Labs">
+    <PageTracker pageName="solutions" pageCategory="product" />
+    <Navigation />
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title">Unsere Lösungen</h1>
+                <p class="hero__tagline">Digitale Fallverwaltung für Pflege und soziale Dienste.</p>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container">
+                <div class="content__intro">
+                    <p class="intro__text">
+                        Wir entwickeln einfache digitale Lösungen für die Fallverwaltung in Pflege und sozialen Diensten – derzeit mit Fokus auf Schulsozialarbeit.
+                    </p>
+                </div>
+
+                <!-- School Social Work Solutions -->
+                <div class="solutions-section">
+                    <h2 class="section__title">Schulsozialarbeit</h2>
+                    <div class="products">
+                        <div class="product__card product__card--featured">
+                            <div class="product__header">
+                                <h3 class="product__title">SozialCare App</h3>
+                                <span class="product__status">Pilot</span>
+                            </div>
+                            <p class="product__description">
+                                Digitales Fallmanagement ersetzt papierbasierte Arbeitsabläufe. Derzeit im Pilot 
+                                mit einer Privatschule aus der Region, mit Fokus auf Zeiteinsparungen und Datenschutz-Bereitschaft.
+                            </p>
+                            <ul class="product__features">
+                                <li>Fälle und Nachgespräche einfach verwalten</li>
+                                <li>Echtzeit-Übersichten für die Leitung</li>
+                                <li>DSGVO-konform by design</li>
+                                <li>Berichte schnell erstellen</li>
+                                <li>Vollständiger Desktop- und Mobilzugriff</li>
+                            </ul>
+                            <div class="product__actions">
+                                <a href="/de/solutions/sozialcare" class="button button--primary">Mehr erfahren</a>
+                                <a href="mailto:hello@caresoftwarelabs.com?subject=SozialCare%20Pilotprogramm" class="button button--secondary">Am Pilot teilnehmen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta">
+                    <h2 class="cta__title">Pilot-Partner gesucht</h2>
+                    <p class="cta__text">
+                        Wir suchen weitere Schulen für unser Pilotprogramm. 
+                        Helfen Sie dabei, unseren Ansatz zu validieren und erhalten Sie frühen Zugang zur Plattform.
+                    </p>
+                    <div class="cta__actions">
+                        <a href="mailto:hello@caresoftwarelabs.com?subject=Pilotprogramm%20Anfrage" class="button">Kontaktieren Sie uns</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>
+
+<style>
+    /* Layout */
+    main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-bg-primary);
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 8rem 0 4rem 0;
+        text-align: center;
+        background-color: var(--color-bg-primary);
+    }
+
+    .hero__title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 300;
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+        letter-spacing: -0.02em;
+    }
+
+    .hero__tagline {
+        font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+        color: var(--color-text-secondary);
+        font-weight: 400;
+        margin: 0;
+    }
+
+    /* Content Section */
+    .content {
+        padding: 4rem 0 6rem 0;
+        background-color: var(--color-bg-primary);
+    }
+
+    .content__intro {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .intro__text {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: var(--color-text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Solutions Sections */
+    .solutions-section {
+        margin-bottom: 4rem;
+    }
+
+    .section__title {
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--color-primary);
+        margin: 0 0 2rem 0;
+        text-align: center;
+    }
+
+    /* Products */
+    .products {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .product__card {
+        background-color: var(--color-bg-secondary);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: 2rem;
+    }
+
+    .product__card--featured {
+        border-color: var(--color-primary);
+        border-width: 2px;
+    }
+
+    .product__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .product__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--color-primary);
+        margin: 0;
+    }
+
+    .product__status {
+        font-size: 0.875rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        background-color: #10b981;
+        color: white;
+        font-weight: 500;
+    }
+
+    .product__description {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--color-text-secondary);
+        margin-bottom: 1.5rem;
+    }
+
+    .product__features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+    }
+
+    .product__features li {
+        font-size: 0.9375rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+
+    .product__features li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--color-primary);
+        font-weight: bold;
+    }
+
+    .product__features li:last-child {
+        margin-bottom: 0;
+    }
+
+    .product__actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .button--primary {
+        background-color: var(--color-primary);
+        color: white;
+    }
+
+    /* CTA Section */
+    .cta {
+        text-align: center;
+        padding: 3rem 2rem;
+        background-color: var(--color-bg-secondary);
+        border-radius: 8px;
+        margin-top: 3rem;
+    }
+
+    .cta__title {
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+    }
+
+    .cta__text {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: var(--color-text-secondary);
+        margin-bottom: 2rem;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta__actions {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .hero {
+            padding: 6rem 0 3rem 0;
+        }
+
+        .content {
+            padding: 3rem 0 4rem 0;
+        }
+
+        .content__intro {
+            margin-bottom: 3rem;
+        }
+
+        .solutions-section {
+            margin-bottom: 3rem;
+        }
+
+        .product__card {
+            padding: 1.5rem;
+        }
+
+        .product__header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .product__actions {
+            flex-direction: column;
+        }
+
+        .product__actions .button {
+            width: 100%;
+        }
+
+        .cta {
+            padding: 2rem 1.5rem;
+        }
+    }
+</style>

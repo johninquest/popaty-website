@@ -1,0 +1,617 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import PageTracker from '../../components/PageTracker.astro';
+---
+
+<Layout title="SozialCM - Digital. Sicher. Stressfrei. Fallmanagement für soziale Dienste">
+    <PageTracker pageName="home" pageCategory="landing" />
+    <Navigation />
+
+    <main>
+        <section class="hero">
+            <h1>Digital. Sicher. Stressfrei.</h1>
+            <p>Fallmanagement für soziale Dienste</p>
+            <p class="hero-subtext">SozialCM ist die DSGVO-konforme Plattform, die Fachkräften in sozialen Diensten hilft, Dokumentation zu vereinfachen, Zeit zu sparen und den Überblick zu behalten—damit Sie sich auf das Wesentliche konzentrieren können: Menschen helfen.</p>
+            <span class="status-badge">Pilot</span>
+        </section>
+
+        <section>
+            <h2>Heute für Schulen. Morgen für alle sozialen Dienste.</h2>
+            <p class="section-intro">Aktuell ist SozialCM <strong>spezialisiert auf Schulsozialarbeit</strong>—weil wir wissen, wie wichtig strukturierte Fallbearbeitung, sichere Dokumentation und nahtlose Teamarbeit für den Erfolg von Kindern und Jugendlichen sind.</p>
+            <p class="section-intro">Doch unser Ziel ist größer: <strong>Wir wollen alle sozialen Dienste entlasten</strong>—von Jugendämtern über Flüchtlingshilfen bis hin zu Pflege- und Suchtberatungsstellen. Ihre Arbeit verdient moderne Tools, die mitdenken.</p>
+        </section>
+
+        <section>
+            <h2>Mehr Zeit für das, was zählt</h2>
+            <ul class="bullets">
+                <li><strong>Einfache Falldokumentation</strong> – Protokolle, Nachgespräche und Berichte in Minuten erledigt</li>
+                <li><strong>Echtzeit-Übersichten</strong> – Trends, offene Aufgaben und Fortschritte auf einen Blick</li>
+                <li><strong>DSGVO-konform & sicher</strong> – Deutsche Server, Verschlüsselung und rollenbasierte Zugriffe</li>
+                <li><strong>Mobil & Desktop</strong> – Überall zugänglich, ob im Büro oder unterwegs</li>
+                <li><strong>Nahtlose Übergaben</strong> – Kein Wissen geht verloren, auch bei Personalwechsel</li>
+            </ul>
+            <p class="section-intro">Mit SozialCM <strong>reduzieren Sie den Dokumentationsstress um bis zu 50%</strong>—damit Sie sich auf Ihre Klienten konzentrieren können.</p>
+        </section>
+
+        <section>
+            <h2>Schulsozialarbeit. Endlich digital. Endlich einfach.</h2>
+            <p class="section-intro">Schulsozialarbeiter:innen stehen täglich vor der Herausforderung, Fälle zu dokumentieren, Berichte zu schreiben und den Überblick zu behalten—oft mit veralteten Tools oder Papierakten.</p>
+            <p class="section-intro"><strong>SozialCM ändert das:</strong></p>
+            <ul class="bullets">
+                <li><strong>Strukturierte Fallbearbeitung</strong> – Alle Informationen an einem Ort</li>
+                <li><strong>Schnelle Berichterstellung</strong> – Vorlagen für Protokolle, Statistiken und Förderanträge</li>
+                <li><strong>Transparenz für Schulleitungen</strong> – Offene Fälle, Trends und Handlungsbedarf sofort sichtbar</li>
+            </ul>
+        </section>
+
+        <section class="app-preview">
+            <h2>App-Einblicke</h2>
+            <p class="preview-subtitle">Klicken Sie auf ein Bild für eine detaillierte Ansicht</p>
+            <div class="preview-gallery">
+                <div class="preview-item">
+                    <div class="preview-image-container" 
+                         data-image="/images/sozialcm-dashboard.png" 
+                         data-caption="Dashboard mit Echtzeit-Einblicken und Statistiken">
+                        <img src="/images/sozialcm-dashboard.png" alt="SozialCM Dashboard mit Echtzeit-Übersicht und Statistiken" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="preview-placeholder">
+                            <div class="placeholder-icon">📊</div>
+                            <p>Dashboard</p>
+                            <small>Echtzeit-Übersicht</small>
+                        </div>
+                        <div class="preview-overlay">
+                            <div class="zoom-icon expand-icon"></div>
+                        </div>
+                    </div>
+                    <p class="preview-caption">Dashboard mit Echtzeit-Einblicken und Statistiken</p>
+                </div>
+                <div class="preview-item">
+                    <div class="preview-image-container" 
+                         data-image="/images/sozialcm-case-list.png" 
+                         data-caption="Vollständige Fallliste mit Filter- und Sortierfunktionen">
+                        <img src="/images/sozialcm-case-list.png" alt="Falllistenansicht mit allen aktiven Fällen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="preview-placeholder">
+                            <div class="placeholder-icon">📋</div>
+                            <p>Fallliste</p>
+                            <small>Alle Fälle im Überblick</small>
+                        </div>
+                        <div class="preview-overlay">
+                            <div class="zoom-icon expand-icon"></div>
+                        </div>
+                    </div>
+                    <p class="preview-caption">Vollständige Fallliste mit Filter- und Sortierfunktionen</p>
+                </div>
+                <div class="preview-item">
+                    <div class="preview-image-container" 
+                         data-image="/images/sozialcm-case-details.png" 
+                         data-caption="Detaillierte Fallinformationen und Dokumentation">
+                        <img src="/images/sozialcm-case-details.png" alt="Einzelne Falldetailansicht" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="preview-placeholder">
+                            <div class="placeholder-icon">👤</div>
+                            <p>Falldetails</p>
+                            <small>Einzelfallansicht</small>
+                        </div>
+                        <div class="preview-overlay">
+                            <div class="zoom-icon expand-icon"></div>
+                        </div>
+                    </div>
+                    <p class="preview-caption">Detaillierte Fallinformationen und Dokumentation</p>
+                </div>
+                <div class="preview-item">
+                    <div class="preview-image-container" 
+                         data-image="/images/sozialcm-follow-ups.png" 
+                         data-caption="Nachgespräche und Folgetermine erfassen und verwalten">
+                        <img src="/images/sozialcm-follow-ups.png" alt="Nachgespräche und Folgetermine erfassen und verwalten" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="preview-placeholder">
+                            <div class="placeholder-icon">🔄</div>
+                            <p>Nachgespräche</p>
+                            <small>Termine erfassen</small>
+                        </div>
+                        <div class="preview-overlay">
+                            <div class="zoom-icon expand-icon"></div>
+                        </div>
+                    </div>
+                    <p class="preview-caption">Nachgespräche und Folgetermine erfassen und verwalten</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="imageModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <img id="modalImage" src="" alt="" />
+                <div class="modal-caption" id="modalCaption"></div>
+            </div>
+        </div>
+
+        <section>
+            <h2>Gemeinsam soziale Dienste revolutionieren</h2>
+            <p class="section-intro">Unser Ziel ist es, <strong>allen sozialen Diensten in Deutschland</strong> eine Plattform zu bieten, die Dokumentation vereinfacht, Compliance sichert und Teams entlastet.</p>
+            <p class="section-intro">Sie arbeiten in der <strong>Jugendhilfe, Flüchtlingsbetreuung, Pflege oder Suchtberatung</strong>? Wir hören zu! Teilen Sie uns Ihre Herausforderungen mit—und gestalten Sie mit uns die Zukunft von SozialCM.</p>
+        </section>
+
+        <section>
+            <h2>Vertrauen ist die Grundlage</h2>
+            <ul class="bullets">
+                <li><strong>DSGVO-konform by Design</strong> – Datenminimierung, sichere Hosting-Standards (EU/DE) und Verschlüsselung</li>
+                <li><strong>Rollenbasierte Zugriffe</strong> – Nur autorisierte Personen sehen sensible Daten</li>
+                <li><strong>Deutsche Server</strong> – Ihre Daten bleiben in Deutschland</li>
+            </ul>
+        </section>
+
+        <section class="cta">
+            <a class="button button--primary" href="mailto:hello@caresoftwarelabs.com?subject=SozialCM%20Pilotprogramm">Pilot-Zugang anfordern</a>
+            <a class="button button--secondary" href="mailto:hello@caresoftwarelabs.com?subject=SozialCM%20Demo">Demo vereinbaren</a>
+            <a class="button button--tertiary" href="mailto:hello@caresoftwarelabs.com?subject=SozialCM%20Erweiterung">Interesse an einer Erweiterung?</a>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const previewContainers = document.querySelectorAll('.preview-image-container');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage') as HTMLImageElement;
+        const modalCaption = document.getElementById('modalCaption');
+        const closeBtn = document.querySelector('.modal-close');
+
+        previewContainers.forEach(function(container) {
+            container.addEventListener('click', function(this: HTMLElement) {
+                const imageSrc = this.getAttribute('data-image');
+                const caption = this.getAttribute('data-caption');
+                if (modal && modalImg && modalCaption && imageSrc) {
+                    modal.style.display = 'block';
+                    modalImg.src = imageSrc;
+                    modalImg.alt = caption || '';
+                    modalCaption.textContent = caption || '';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        if (closeBtn) closeBtn.addEventListener('click', function() {
+            if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
+        });
+
+        if (modal) modal.addEventListener('click', function(e) {
+            if (e.target === modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal && modal.style.display === 'block') {
+                modal.style.display = 'none'; document.body.style.overflow = 'auto';
+            }
+        });
+    });
+</script>
+
+<style>
+    /* Same styles as before */
+    main { 
+        max-width: 800px; 
+        margin: 0 auto; 
+        padding: 2rem 1rem; 
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-bg-primary);
+    }
+
+    .hero {
+        text-align: center;
+        padding: 4rem 0 3rem 0;
+    }
+
+    h1 { 
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 300; 
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+        letter-spacing: -0.02em;
+    }
+
+    .hero p { 
+        font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+        color: var(--color-text-secondary); 
+        margin: 0 0 1.5rem 0; 
+        font-weight: 400;
+    }
+
+    .hero-subtext {
+        font-size: clamp(0.9375rem, 2vw, 1.125rem);
+        color: var(--color-text-secondary);
+        margin: 1.5rem auto 0 auto;
+        max-width: 700px;
+        line-height: 1.6;
+    }
+
+    .status-badge {
+        display: inline-block;
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 500;
+        background-color: #10b981;
+        color: white;
+    }
+
+    h2 { 
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 400;
+        color: var(--color-primary);
+        margin: 3rem 0 1.5rem 0; 
+        text-align: center;
+    }
+
+    .section-intro {
+        text-align: center;
+        color: var(--color-text-secondary);
+        margin: 1rem auto;
+        max-width: 700px;
+        line-height: 1.7;
+        font-size: 1rem;
+    }
+
+    .bullets { 
+        margin: 0 0 2rem 0; 
+        padding-left: 0; 
+        color: var(--color-text-secondary); 
+        line-height: 1.7;
+        list-style: none;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bullets li { 
+        margin: 0.75rem 0; 
+        padding-left: 1.5rem;
+        position: relative;
+        font-size: 1rem;
+    }
+
+    .bullets li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--color-primary);
+        font-weight: bold;
+    }
+
+    .app-preview {
+        margin: 3rem 0;
+    }
+
+    .preview-subtitle {
+        text-align: center;
+        font-size: 0.9375rem;
+        color: var(--color-text-secondary);
+        margin: -1rem 0 3rem 0;
+        font-style: italic;
+    }
+
+    .preview-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .preview-item {
+        background-color: var(--color-bg-secondary);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .preview-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-image-container {
+        position: relative;
+        width: 100%;
+        height: 240px;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .preview-image-container:hover .preview-overlay {
+        opacity: 1;
+    }
+
+    .preview-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 8px;
+    }
+
+    .zoom-icon {
+        font-size: 2rem;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 1rem;
+        border-radius: 50%;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .zoom-icon:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        transform: scale(1.1);
+    }
+
+    .expand-icon {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+    }
+
+    .expand-icon::before,
+    .expand-icon::after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        border-radius: 1px;
+    }
+
+    .expand-icon::before {
+        width: 16px;
+        height: 2px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .expand-icon::after {
+        width: 2px;
+        height: 16px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .preview-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-placeholder {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+        border: 2px dashed var(--color-border);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        color: var(--color-text-secondary);
+    }
+
+    .placeholder-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        opacity: 0.6;
+    }
+
+    .preview-placeholder p {
+        font-weight: 500;
+        font-size: 1.125rem;
+        margin: 0 0 0.25rem 0;
+        color: var(--color-primary);
+    }
+
+    .preview-placeholder small {
+        font-size: 0.875rem;
+        opacity: 0.7;
+        margin: 0;
+    }
+
+    .preview-caption {
+        font-size: 0.875rem;
+        color: var(--color-text-secondary);
+        margin: 0;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .modal-content {
+        position: relative;
+        margin: 2% auto;
+        padding: 0;
+        width: 90%;
+        max-width: 1200px;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1001;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .modal-close:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    #modalImage {
+        max-width: 100%;
+        max-height: 80vh;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-caption {
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1.125rem;
+        max-width: 600px;
+    }
+
+    .cta { 
+        display: flex; 
+        gap: 1rem; 
+        margin: 4rem 0 2rem 0; 
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+    }
+
+    .button--primary {
+        background-color: var(--color-primary);
+        color: white;
+    }
+
+    .button--primary:hover {
+        background-color: var(--color-primary-hover);
+    }
+
+    .button--secondary {
+        background-color: var(--color-bg-secondary);
+        color: var(--color-text-primary);
+        border: 1px solid var(--color-border);
+    }
+
+    .button--secondary:hover {
+        background-color: var(--color-accent);
+    }
+
+    .button--tertiary {
+        background-color: transparent;
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+    }
+
+    .button--tertiary:hover {
+        background-color: var(--color-primary);
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        main {
+            padding: 1.5rem 1rem;
+        }
+
+        .hero {
+            padding: 3rem 0 2rem 0;
+        }
+
+        .preview-gallery {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .preview-item {
+            padding: 1rem;
+        }
+
+        .preview-image-container {
+            height: 200px;
+        }
+
+        .placeholder-icon {
+            font-size: 2rem;
+        }
+
+        .modal-content {
+            width: 95%;
+            margin: 5% auto;
+        }
+
+        .modal-close {
+            top: -35px;
+            font-size: 1.5rem;
+            width: 35px;
+            height: 35px;
+        }
+
+        .zoom-icon {
+            font-size: 1.5rem;
+            padding: 0.75rem;
+        }
+
+        .cta {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cta .button {
+            width: 100%;
+            max-width: 280px;
+            text-align: center;
+        }
+    }
+</style>

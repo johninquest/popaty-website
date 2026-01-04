@@ -1,0 +1,247 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import PageTracker from '../../components/PageTracker.astro';
+import { useTranslations } from '../../i18n';
+
+const t = useTranslations('de');
+---
+
+<Layout title="Über uns | Care Software Labs">
+    <PageTracker pageName="about" pageCategory="info" />
+    <Navigation />
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title">Über uns</h1>
+                <p class="hero__tagline">Weniger Verwaltung. Mehr Zeit für Beratung.</p>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container">
+                <div class="content__section">
+                    <h2 class="section__title">Unsere Geschichte</h2>
+                    <p class="content__description">
+                        Care Software Labs ist ein kleines Technologie‑Labor. Wir helfen Pflege‑ und Sozialdienstleistern, administrativen Aufwand zu senken und die Fallarbeit übersichtlich zu organisieren. Software soll unterstützen, nicht aufhalten.
+                    </p>
+                    <!-- <p class="content__description">
+                        Wir verbinden Praxis aus Schulsozialarbeit und sozialer Arbeit mit moderner Entwicklung – mit Fokus auf Tools, die im Alltag wirklich genutzt werden.
+                    </p> -->
+                </div>
+
+                <div class="content__section">
+                    <h2 class="section__title">Was wir machen</h2>
+                    <p class="content__description">
+                        Unsere Apps sparen Zeit bei Protokollen, Berichten und Auswertungen und schaffen klare Übersicht über Fälle, Termine und Zuständigkeiten – DSGVO‑konform und einfach bedienbar.
+                    </p>
+                </div>
+
+                <!-- New: tangible value section -->
+                <div class="content__section">
+                    <h2 class="section__title">Konkreter Nutzen</h2>
+                    <div class="benefits__grid">
+                        <div class="benefit-card">
+                            <h3 class="approach__title">Effizienz</h3>
+                            <p class="approach__text">
+                                Weniger Aufwand für Dokumentation, Berichte und Auswertungen.
+                            </p>
+                        </div>
+                        <div class="benefit-card">
+                            <h3 class="approach__title">Transparenz</h3>
+                            <p class="approach__text">
+                                Echtzeit‑Überblick über Fälle, Trends und Auslastung – für sichere Entscheidungen.
+                            </p>
+                        </div>
+                        <div class="benefit-card">
+                            <h3 class="approach__title">Mehr Zeit für Beratung</h3>
+                            <p class="approach__text">
+                                Klare Vorlagen und einfache Abläufe reduzieren Nacharbeit und geben Zeit für die direkte Arbeit mit Schüler:innen.
+                            </p>
+                        </div>
+                        <div class="benefit-card">
+                            <h3 class="approach__title">Verlässliche Berichte</h3>
+                            <p class="approach__text">
+                                Einheitliche, prüffertige Unterlagen für Schulleitung und Behörden – schnell erstellt.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__section">
+                    <h2 class="section__title">Unser Ansatz</h2>
+                    <div class="approach__grid">
+                        <div class="approach__card">
+                            <h3 class="approach__title">Modular aufgebaut</h3>
+                            <p class="approach__text">
+                                Schlank starten, bei Bedarf erweitern – ohne Systemsprung oder lange Umstellungen.
+                            </p>
+                        </div>
+                        <div class="approach__card">
+                            <h3 class="approach__title">Einfach im Alltag</h3>
+                            <p class="approach__text">
+                                Klare Oberflächen, sinnvolle Standards, kurze Einarbeitung – damit Dokumentation nicht bremst.
+                            </p>
+                        </div>
+                        <div class="approach__card">
+                            <h3 class="approach__title">Praxisnah</h3>
+                            <p class="approach__text">
+                                Entsteht aus echten Anforderungen: bessere Übersicht, weniger Klicks, zuverlässige Erinnerungen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>
+
+<!-- Copy the same styles from your English about.astro -->
+<style>
+    /* Layout */
+    main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-bg-primary);
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 8rem 0 4rem 0;
+        text-align: center;
+        background-color: var(--color-bg-primary);
+    }
+
+    .hero__title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 300;
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+        letter-spacing: -0.02em;
+    }
+
+    .hero__tagline {
+        font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+        color: var(--color-text-secondary);
+        font-weight: 400;
+        margin: 0;
+    }
+
+    /* Content Section */
+    .content {
+        padding: 4rem 0 6rem 0;
+        background-color: var(--color-bg-primary);
+    }
+
+    .content__section {
+        margin-bottom: 4rem;
+    }
+
+    .content__section:last-child {
+        margin-bottom: 0;
+    }
+
+    .section__title {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 400;
+        color: var(--color-primary);
+        margin: 0 0 1.5rem 0;
+        text-align: center;
+    }
+
+    .content__description {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: var(--color-text-secondary);
+        margin-bottom: 1.5rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .content__description:last-of-type {
+        margin-bottom: 0;
+    }
+
+    /* Approach Grid */
+    .approach__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .approach__card {
+        background-color: var(--color-bg-secondary);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .approach__title {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: var(--color-primary);
+        margin: 0 0 1rem 0;
+    }
+
+    .approach__text {
+        font-size: 1rem;
+        color: var(--color-text-secondary);
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Benefits: reuse card look for consistency */
+    .benefits__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .benefit-card {
+        background-color: var(--color-bg-secondary);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .hero {
+            padding: 6rem 0 3rem 0;
+        }
+
+        .content {
+            padding: 3rem 0 4rem 0;
+        }
+
+        .content__section {
+            margin-bottom: 3rem;
+        }
+
+        .approach__grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .approach__card {
+            padding: 1.5rem;
+        }
+    }
+</style>
