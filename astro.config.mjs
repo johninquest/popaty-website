@@ -3,8 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://johninquest.github.io',
-    base: '/scm-website/',
+    site: 'https://sozialcm.de',
     devToolbar: {
         enabled: false
     },
@@ -12,11 +11,10 @@ export default defineConfig({
         defaultLocale: 'de',
         locales: ['de', 'en'],
         routing: {
-            prefixDefaultLocale: true,  // Show /de/ in URL
+            prefixDefaultLocale: true,
             redirectToDefaultLocale: true
         }
     },
-    // Define environment variables schema
     env: {
         schema: {
             PUBLIC_GA_MEASUREMENT_ID: {

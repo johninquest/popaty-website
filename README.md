@@ -85,7 +85,7 @@ Create a `.env` file in the root directory with your environment variables for a
 
 ## 📧 Contact
 
-- **Email:** hello@caresoftwarelabs.com
+- **Email:** hello@sozialcm.de
 - **Company:** Care Software Labs
 - **Location:** Würzburg, Germany
 
