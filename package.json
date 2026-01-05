@@ -1,7 +1,7 @@
 {
   "name": "scm-website",
   "type": "module",
-  "version": "0.1.05",
+  "version": "0.1.06",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
