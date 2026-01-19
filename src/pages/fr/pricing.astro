@@ -1,0 +1,103 @@
+---
+import { useTranslations } from '../../i18n/';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'fr';
+const t = useTranslations(lang);
+---
+
+<BaseLayout 
+    lang={lang} 
+    title={`${t('pricing.title')} - ${t('site.title')}`}
+    description={t('pricing.subtitle')}
+>
+    <Navigation />
+    
+    <!-- Pricing Header -->
+    <section class="section hero">
+        <div class="container text-center">
+            <h1 class="mb-4">{t('pricing.title')}</h1>
+            <p class="pricing-subtitle text-secondary max-w-3xl mb-8">{t('pricing.subtitle')}</p>
+        </div>
+    </section>
+
+    <!-- Pricing Grid -->
+    <section class="section pricing">
+        <div class="container">
+            <div class="grid grid-md-2 grid-lg-4">
+                <div class="pricing-card">
+                    <h3 class="text-brand mb-4">{t('pricing.free')}</h3>
+                    <p class="text-secondary mb-4">{t('pricing.free.properties')}</p>
+                    <p class="text-muted pricing-features">{t('pricing.free.features')}</p>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="text-brand mb-4">{t('pricing.starter')}</h3>
+                    <p class="text-secondary">{t('pricing.starter.properties')}</p>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="text-brand mb-4">{t('pricing.growth')}</h3>
+                    <p class="text-secondary">{t('pricing.growth.properties')}</p>
+                </div>
+                <div class="pricing-card pricing-featured">
+                    <h3 class="text-brand mb-4">{t('pricing.pro')}</h3>
+                    <p class="text-secondary mb-4">{t('pricing.pro.properties')}</p>
+                    <p class="text-muted pricing-features">{t('pricing.pro.features')}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</BaseLayout>
+
+<style>
+    .hero {
+        padding-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .hero {
+            padding-top: 3rem;
+        }
+    }
+
+    .pricing-subtitle {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.7;
+    }
+
+    .pricing {
+        background-color: var(--bg-white);
+    }
+
+    .pricing-card {
+        background-color: var(--bg-white);
+        border: 2px solid var(--border-light);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        transition: all 0.2s ease;
+    }
+
+    @media (min-width: 768px) {
+        .pricing-card {
+            padding: 2rem;
+        }
+    }
+
+    .pricing-card:hover {
+        border-color: var(--brand);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .pricing-featured {
+        border-color: var(--brand);
+        border-width: 2px;
+    }
+
+    .pricing-features {
+        font-size: 0.875rem;
+    }
+</style>

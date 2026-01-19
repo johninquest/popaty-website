@@ -1,7 +1,7 @@
 {
-  "name": "scm-website",
+  "name": "popaty-website",
   "type": "module",
-  "version": "0.1.06",
+  "version": "0.1.19",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

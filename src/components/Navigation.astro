@@ -7,23 +7,30 @@ const currentPath = Astro.url.pathname;
 
 // Build navigation items with proper language paths
 const navItems = [
-  { href: `/${lang}`, label: t("nav.home") },
-  { href: `/${lang}/features`, label: t("nav.features") },
-  { href: `/${lang}/pricing`, label: t("nav.pricing") },
-  //    { href: `/${lang}/solutions`, label: t('nav.solutions') }
+  { href: lang === 'en' ? '/' : `/${lang}`, label: t("nav.home") },
+  { href: lang === 'en' ? '/features' : `/${lang}/features`, label: t("nav.features") },
+  { href: lang === 'en' ? '/pricing' : `/${lang}/pricing`, label: t("nav.pricing") },
 ];
 
 // Language switcher links - preserve the current path structure
 const getLocalizedPath = (targetLang: string) => {
-  const pathWithoutLang = currentPath.replace(/^\/(de|en)/, "") || "/";
-  return `/${targetLang}${pathWithoutLang}`;
+  // Remove /fr prefix if present
+  const pathWithoutLang = currentPath.replace(/^\/fr/, "") || "/";
+  
+  // If switching to English, no prefix needed
+  if (targetLang === 'en') {
+    return pathWithoutLang;
+  }
+  
+  // If switching to French, add /fr prefix
+  return `/fr${pathWithoutLang}`;
 };
 ---
 
 <nav class="nav">
   <div class="container">
     <div class="nav__content">
-      <a href={`/${lang}`} class="nav__logo">{t("site.title")}</a>
+      <a href={lang === 'en' ? '/' : `/${lang}`} class="nav__logo">{t("site.title")}</a>
       <div class="nav__right">
         <ul class="nav__menu">
           {
@@ -44,11 +51,11 @@ const getLocalizedPath = (targetLang: string) => {
             class="language-picker"
             onchange="window.location.href = this.value"
           >
-            <option value={getLocalizedPath("de")} selected={lang === "de"}
-              >🇩🇪 DE</option
-            >
             <option value={getLocalizedPath("en")} selected={lang === "en"}
               >🇬🇧 EN</option
+            >
+            <option value={getLocalizedPath("fr")} selected={lang === "fr"}
+              >🇫🇷 FR</option
             >
           </select>
         </div>
@@ -59,15 +66,15 @@ const getLocalizedPath = (targetLang: string) => {
 
 <style>
   .nav {
-    background-color: var(--color-bg-primary);
-    border-bottom: 1px solid var(--color-border);
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border-light);
     position: sticky;
     top: 0;
     z-index: 100;
   }
 
   .container {
-    max-width: 800px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 1.5rem;
   }
@@ -88,7 +95,7 @@ const getLocalizedPath = (targetLang: string) => {
   .nav__logo {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--brand);
     text-decoration: none;
   }
 
@@ -105,7 +112,7 @@ const getLocalizedPath = (targetLang: string) => {
   }
 
   .nav__link {
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     text-decoration: none;
     font-weight: 400;
     transition: color 0.2s ease;
@@ -113,16 +120,16 @@ const getLocalizedPath = (targetLang: string) => {
 
   .nav__link:hover,
   .nav__link--active {
-    color: var(--color-primary);
+    color: var(--brand);
   }
 
   .language-picker {
-    background-color: var(--color-bg-primary);
-    border: 1px solid var(--color-border);
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-light);
     border-radius: 4px;
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     cursor: pointer;
     min-width: 80px;
     font-weight: 500;
@@ -132,12 +139,12 @@ const getLocalizedPath = (targetLang: string) => {
   }
 
   .language-picker:hover {
-    border-color: var(--color-primary);
+    border-color: var(--brand);
   }
 
   .language-picker:focus {
     outline: none;
-    border-color: var(--color-primary);
+    border-color: var(--brand);
   }
 
   /* Responsive */

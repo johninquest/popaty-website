@@ -1,11 +1,11 @@
 ---
-// filepath: src/pages/index.astro
-import { useTranslations } from '../i18n/';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+// filepath: src/pages/fr/index.astro
+import { useTranslations } from '../../i18n/';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
 
-const lang = 'en';
+const lang = 'fr';
 const t = useTranslations(lang);
 ---
 
@@ -26,8 +26,8 @@ const t = useTranslations(lang);
                 <a href="#" class="btn btn-primary">
                     {t('hero.cta.primary')}
                 </a>
-                <a href="/features" class="btn btn-secondary">
-                    Learn More
+                <a href="/fr/features" class="btn btn-secondary">
+                    En savoir plus
                 </a>
             </div>
         </div>

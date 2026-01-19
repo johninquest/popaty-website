@@ -1,80 +1,116 @@
-# SozialCM – GOAL.md
+# Popaty Landing Page Content Kit
 
-## **Our Mission**
-To **relieve the documentation burden** on social service professionals by providing **simple, secure, and stress-free case management software**.
+## 1. Design System (Matches Client App)
 
-We empower social workers to **organize cases, track progress, and collaborate efficiently**, so they can focus on what matters most: **supporting the people they serve**.
+Use these exact values to ensure the landing page feels identical to the app.
 
----
+### Colors
 
-## **Our Vision**
-We envision a future where social service documentation is **intuitive, secure, and mobile-friendly**—free from the constraints of rigid, outdated systems or paper-based chaos.
+| Element | Color | Usage |
+|---------|-------|-------|
+| Primary (Brand) | `#8c6a3a` | Copper/Brown |
+| Primary Hover | `#76572f` | Interactive states |
+| Background | `#F9FAFB` | Off-white |
+| Text (Main) | `#202124` | Raven Black |
+| Text (Muted) | `#6B7280` | Gray-500 |
 
-By designing software that **adapts to real-world workflows** and prioritizes privacy, we aim to **reduce documentation stress by 50%** and help social workers reclaim time for meaningful client work.
+### Typography
 
----
+Based on asset files in `fonts`:
 
-## **Core Values**
-1. **Built for Social Workers**
-   - Designed by understanding **real workflows in social services**.
-   - Prioritize **simplicity, speed, and mobile accessibility**.
-
-2. **Privacy & Security First**
-   - **GDPR-compliant** with German servers and end-to-end encryption.
-   - Role-based access control to protect sensitive client information.
-
-3. **Reduce Stress, Not Features**
-   - Focus on **essential functionality** that saves time.
-   - Avoid bloated interfaces—keep it clean and purposeful.
-
-4. **Seamless Collaboration**
-   - Enable **smooth team handovers** and shared case visibility.
-   - Real-time insights without overwhelming notifications.
-
-5. **Accessible Everywhere**
-   - **Mobile-first design** for on-the-go documentation.
-   - Works seamlessly on desktop, tablet, and smartphone.
+- **Font Family:** Roboto (Variable)
+- **Weights:** Light (100) to Black (900)
 
 ---
 
-## **What Sets Us Apart**
-- **Not Just Software, But Relief:** We prioritize **reducing documentation stress** over adding endless features.
-- **Made for Germany:** Built with **GDPR compliance and German data protection** as core requirements.
-- **School Social Work First:** Currently specialized in **school social work**, with plans to expand to all social services.
-- **Lightweight & Fast:** Unlike complex legacy systems, SozialCM is **simple, intuitive, and quick to learn**.
+## 2. Hero Section
+
+- **App Name:** Popaty
+- **Tagline:** Property rent & expense manager.
+- **Value Proposition:** A lean, focused tool for DIY landlords. Stop wrestling with spreadsheets and track rent payments in seconds.
+- **Primary CTA:** "Start Tracking Free"
+- **Secondary CTA:** "View Demo"
 
 ---
 
-## **Our Goals for 2025-2026**
-- Successfully complete our **pilot phase** with school social workers in Germany.
-- Expand to **all social service sectors**: youth welfare, refugee services, care facilities, addiction counseling.
-- Build **key integrations** with existing social service tools to reduce data silos.
-- Develop **AI-assisted features** to automate routine documentation tasks.
-- Reach **100+ active users** and establish SozialCM as the go-to case management tool for social services in Germany.
+## 3. Key Features
+
+### 💰 Frictionless Rent Tracking
+
+**The Problem:** Comprehensive suites are too complex.
+
+**The Solution:** Record payments in 3 clicks: Select Property → Select Tenant → Save.
+
+**Details:** Track partial payments, payment methods (Cash, Mobile Money), and due dates.
+
+### 👥 Seamless Collaboration
+
+**Email-First Sharing:** No complex team setups. Just type an email to grant access.
+
+**Roles:** Assign "Managers" (can edit) or "Viewers" (read-only) to specific properties.
+
+**Free for Teams:** Property owners pay, but managers and accountants access shared properties for free.
+
+### 📊 Expense Management
+
+**Categorized Tracking:** Log maintenance, repairs, utilities, taxes, and management fees.
+
+**Vendor Tracking:** Keep a history of which vendors were paid for specific jobs.
+
+**Multi-Currency:** Automatic currency formatting based on property country.
+
+### 🛡️ Trust & Transparency
+
+**Immutable Audit Logs:** Every action (creation, update, deletion) is permanently recorded.
+
+**Dispute Resolution:** See exactly who changed a payment amount or tenant detail and when.
+
+### 📱 Mobile-First Design
+
+**PWA Ready:** Install directly to your phone's home screen.
+
+**Offline Capable:** Works even with spotty internet connections.
 
 ---
 
-## **Current Status**
-🟢 **Pilot Phase Active**
+## 4. How It Works
 
-We're currently working with early adopters in school social work to refine our platform based on real-world feedback.
-
----
-
-## **Join Our Pilot Program**
-We're looking for social service professionals who want to:
-- Save time on documentation
-- Improve case organization and handovers
-- Work with a modern, mobile-friendly tool
-- Help shape the future of social work software
-
-**Interested?** Contact us at **hello@sozialcm.de
+1. **Setup:** Create a Property → Add Units (optional) → Add Tenants.
+2. **Daily Use:** Select Tenant → Enter Amount → Save.
+3. **Delegate:** Property Settings → Share via Email → Assign Role.
 
 ---
 
-## **Built by Care Software Labs**
-*Modular tech, meaningful care.*
+## 5. Pricing Strategy
 
-**Location:** Würzburg, Germany  
-**Contact:** hello@caresoftwarelabs.com  
-**LinkedIn:** 
+**Model:** Owner-Pays (SaaS)
+
+| Tier | Properties | Details |
+|------|-----------|---------|
+| **Free** | 1 | Full features. Unlimited sharing. |
+| **Starter** | Up to 3 | - |
+| **Growth** | Up to 10 | - |
+| **Pro** | Unlimited | Priority Support included. |
+
+**Key Selling Point:** "Your property managers, spouses, and accountants never pay a dime. Only the property owner subscribes."
+
+---
+
+## 6. Technical Trust Signals (Footer/About)
+
+To build confidence with tech-savvy users:
+
+- **Security:** Row-level security ensuring data isolation.
+- **Technology:** Built on modern SvelteKit & NestJS architecture.
+- **Global:** Available in English, Hausa, and Deutsch.
+
+---
+
+## 7. Suggested UI Layout
+
+- **Navbar:** Logo (Popaty), Login, Button: "Get Started"
+- **Hero:** Large text, simple screenshot of the "Rent Entry" card (the most used feature)
+- **Feature Grid:** 3 columns highlighting Rent, Expenses, and Sharing
+- **Social Proof:** "Simple for owners, power for managers."
+- **Pricing Table:** Highlight the "Free forever for collaborators" aspect
+- **Footer:** Links, Copyright, Language Switcher
