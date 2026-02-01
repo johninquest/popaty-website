@@ -1,0 +1,308 @@
+Popaty User Manual
+Getting Started
+Sign In
+Navigate to the login page
+
+Open your browser and go to the Popaty application
+You'll see the sign-in screen
+Sign in with Google
+
+Click the "Google" button
+A popup will open asking you to choose your Google account
+Select the account you want to use
+Grant Popaty permission to access your basic profile information
+You'll be automatically redirected to your dashboard
+Note: Popaty uses Google authentication exclusively. You must have a Gmail account to use the application.
+
+Dashboard
+Your dashboard is your home base. It shows all properties you can access.
+
+What You'll See
+My Properties section:
+
+Properties you own and created
+Full control over these properties
+Click "Add Property" button to create a new property
+Shared With Me section:
+
+Properties others have shared with you
+Shows who shared each property
+Your access level (Manager or Viewer) appears as a badge
+Click any property to view its details
+Quick Actions
+Three quick-access buttons let you:
+
+Record Rent: Jump straight to logging a rent payment
+View Tenants: See all tenants across your properties
+Track Expenses: Log a new expense
+Properties
+Create a Property
+Click "Add Property" from the dashboard
+Fill in the required fields:
+Name: Give your property a memorable name (e.g., "Sunrise Apartments")
+City: Where the property is located
+Country: Select from the dropdown
+Construction Year: Optional - when the building was built
+Click "Create Property"
+Your new property appears in "My Properties" on your dashboard.
+
+View Property Details
+Click any property card to see:
+
+Overview with property information
+Units (if you've added any)
+Tenants
+Rent entries
+Expenses
+Activity log (who did what and when)
+Shared access list (who can view/edit this property)
+Edit a Property
+Open the property
+Click the "Edit" button (top-right)
+Update any field
+Click "Save Changes"
+Delete a Property
+Open the property
+Click "Delete Property" button
+Confirm the deletion in the dialog that appears
+Warning: Deleting a property also deletes all its units, tenants, rent entries, and expenses. This cannot be undone.
+
+Sharing Properties (Access Management)
+Only property owners can share properties with others.
+
+Grant Access to Another User
+Open the property you want to share
+Scroll to the "Shared Access" section (visible on the Overview tab)
+See the current list of people with access
+Click the blue "Grant Access" button (top-right of the card)
+In the modal that opens:
+Enter email: Type the person's Gmail address
+Select access level:
+Viewer: Can see everything but cannot make changes
+Manager: Can view and edit tenants, units, rent entries, and expenses
+Click "Grant Access"
+What happens next:
+
+If the user already has a Popaty account, they see the property immediately
+If they don't have an account yet, access is pending until they sign in with that Gmail
+You see them listed in the "Shared Access" section
+Update Someone's Access Level
+Find the person in the "Shared Access" list
+Click "Update Role"
+Choose the new role (Viewer or Manager)
+Click "Update"
+Revoke Access
+Find the person in the "Shared Access" list
+Click the "Revoke" button (or × icon)
+Confirm the action
+They immediately lose access to the property
+Units
+Units let you organize multi-unit properties (apartments, townhouses, etc.). For single-unit properties, you can skip this step.
+
+Add a Unit
+Open a property
+In the "Units" card, click "Add Unit"
+Fill in:
+Unit Number: Required (e.g., "A1", "101")
+Unit Name: Optional descriptive name (e.g., "Ground Floor Left")
+Click "Add"
+View a Unit
+Click "View" next to any unit in the list
+You'll see unit details and assigned tenants
+Edit a Unit
+View the unit details page
+Click "Edit"
+Update the unit number or name
+Click "Save"
+Delete a Unit
+View the unit details page
+Click "Delete Unit"
+Confirm the deletion
+Note: Deleting a unit doesn't delete tenants assigned to it, but they'll show "—" for their unit assignment.
+
+Tenants
+Tenants are the people renting your property or units.
+
+Add a Tenant
+From the property page:
+
+Open a property
+In the "Tenants" card, click "Add Tenant"
+Fill in:
+First Name: Required
+Last Name: Required
+Preferred Name: Optional (how they like to be called)
+ID Card Number: Optional
+Phone: Required
+Unit: Optional - select which unit they occupy
+Status: Active or Inactive
+Click "Add"
+From the Tenants page:
+
+Go to "Tenants" in the navigation
+Select which property
+Click "Add Tenant"
+Follow the same steps above
+View Tenant Details
+Click any tenant's name to see:
+Contact information
+Assigned unit
+Rent payment history
+Edit a Tenant
+Open the tenant details page
+Click "Edit"
+Update any information
+Click "Save"
+Delete a Tenant
+Open the tenant details page
+Click "Delete Tenant"
+Confirm the deletion
+Note: Deleting a tenant also deletes all their rent entries. Consider marking them as "Inactive" instead to preserve history.
+
+Rent Entries
+This is where you record rent payments from tenants.
+
+Record a Rent Payment
+Quick method:
+
+Click "Record Rent" from the dashboard
+Select property, then tenant
+Enter:
+Amount: How much they paid
+Payment Date: When they paid
+Rent Month: Which month this payment covers (e.g., "2025-01" for January 2025)
+Payment Method: Cash, bank transfer, mobile money, etc.
+Notes: Optional additional information
+Click "Record Payment"
+From property page:
+
+Open a property
+Click the "Rent Entries" tab
+Click "Record Rent"
+Tenant is pre-filtered to this property
+Fill in the payment details
+Click "Record Payment"
+View Rent Entries
+By property:
+
+Open a property → Rent Entries tab
+See all rent payments for all tenants in this property
+By tenant:
+
+Open a tenant's details page
+Scroll to "Rent History" section
+All rent entries:
+
+Go to "Rent" in the navigation
+Select a property to filter
+Edit a Rent Entry
+Click on any rent entry
+Click "Edit"
+Update any field
+Click "Save Changes"
+Delete a Rent Entry
+Click on any rent entry
+Click "Delete"
+Confirm the deletion
+Expenses
+Track costs related to maintaining your property.
+
+Record an Expense
+Click "Track Expenses" from the dashboard, or go to "Expenses" in navigation
+Fill in:
+Property: Required - which property incurred this cost
+Unit: Optional - specific unit if applicable
+Category: Required (maintenance, repairs, utilities, insurance, taxes, management, other)
+Description: Required - what the expense was for
+Amount: Required - how much you spent
+Expense Date: When the expense occurred
+Vendor: Optional - who you paid
+Click "Record Expense"
+View Expenses
+By property:
+
+Open a property → Expenses tab
+See all expenses for that property
+All expenses:
+
+Go to "Expenses" in the navigation
+Select a property to filter
+View by month or custom date range
+Edit an Expense
+Click on any expense entry
+Click "Edit"
+Update any field
+Click "Save Changes"
+Delete an Expense
+Click on any expense entry
+Click "Delete"
+Confirm the deletion
+Permission Levels Explained
+Owner
+You created the property
+Full control: create, view, edit, delete everything
+Can share the property with others
+Cannot be removed (you always own what you created)
+Manager
+Granted by the property owner
+Can view and edit:
+Property details
+Units
+Tenants
+Rent entries
+Expenses
+Cannot:
+Share the property with others
+Delete the property
+Viewer
+Granted by the property owner
+Can only view (read-only):
+Property details
+Units
+Tenants
+Rent entries
+Expenses
+Cannot make any changes
+Activity Log
+Every action is tracked for transparency and accountability.
+
+View Activity
+Open any property
+Click the "Activity" tab
+You'll see a chronological list of:
+Who did what
+When they did it
+What changed (for updates)
+Filter Activity
+Use the date range filter to see activity from specific periods
+Default view shows the last 30 days
+Tips & Best Practices
+Use descriptive names: Name properties and units clearly so they're easy to identify
+Record rent promptly: Log payments as soon as you receive them
+Keep tenant info updated: Accurate contact information helps prevent issues
+Use the notes field: Add context to rent entries and expenses for future reference
+Review activity logs: Check who's accessing and modifying your properties
+Grant appropriate access: Give people only the access level they need
+Don't delete, deactivate: Mark tenants as inactive instead of deleting to preserve rent history
+Troubleshooting
+Can't sign in with Google:
+
+Make sure you're using a Gmail account
+Check that popups aren't blocked in your browser
+Try clearing your browser cache and cookies
+Don't see a shared property:
+
+Make sure you signed in with the exact Gmail address the owner used to share
+Ask the owner to verify they granted access
+Check your "Shared With Me" section on the dashboard
+Can't edit something:
+
+Check your access level - you might be a Viewer (read-only)
+Some actions are restricted to property owners only
+Missing data:
+
+Refresh the page
+Check your internet connection
+Verify you're looking at the correct property
+Getting Help
+If you encounter issues not covered in this manual, contact your system administrator or the person who shared the property with you.

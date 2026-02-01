@@ -10,6 +10,7 @@ const navItems = [
   { href: lang === 'en' ? '/' : `/${lang}`, label: t("nav.home") },
   { href: lang === 'en' ? '/features' : `/${lang}/features`, label: t("nav.features") },
   { href: lang === 'en' ? '/pricing' : `/${lang}/pricing`, label: t("nav.pricing") },
+  { href: '/docs', label: 'Documentation' },
 ];
 
 // Language switcher links - preserve the current path structure
@@ -31,6 +32,13 @@ const getLocalizedPath = (targetLang: string) => {
   <div class="container">
     <div class="nav__content">
       <a href={lang === 'en' ? '/' : `/${lang}`} class="nav__logo">{t("site.title")}</a>
+      
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav__toggle-icon"></span>
+        <span class="nav__toggle-icon"></span>
+        <span class="nav__toggle-icon"></span>
+      </button>
+
       <div class="nav__right">
         <ul class="nav__menu">
           {
@@ -64,6 +72,27 @@ const getLocalizedPath = (targetLang: string) => {
   </div>
 </nav>
 
+<script>
+  const toggleButton = document.querySelector('.nav__toggle');
+  const navRight = document.querySelector('.nav__right');
+  
+  toggleButton?.addEventListener('click', () => {
+    const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+    toggleButton.setAttribute('aria-expanded', (!isExpanded).toString());
+    toggleButton.classList.toggle('nav__toggle--active');
+    navRight?.classList.toggle('nav__right--open');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!toggleButton?.contains(e.target as Node) && !navRight?.contains(e.target as Node)) {
+      toggleButton?.classList.remove('nav__toggle--active');
+      navRight?.classList.remove('nav__right--open');
+      toggleButton?.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
 <style>
   .nav {
     background-color: var(--bg-white);
@@ -84,6 +113,7 @@ const getLocalizedPath = (targetLang: string) => {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    position: relative;
   }
 
   .nav__right {
@@ -97,6 +127,36 @@ const getLocalizedPath = (targetLang: string) => {
     font-weight: 600;
     color: var(--brand);
     text-decoration: none;
+  }
+
+  .nav__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 101;
+  }
+
+  .nav__toggle-icon {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-secondary);
+    transition: all 0.3s ease;
+  }
+
+  .nav__toggle--active .nav__toggle-icon:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .nav__toggle--active .nav__toggle-icon:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav__toggle--active .nav__toggle-icon:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 
   .nav__menu {
@@ -149,36 +209,62 @@ const getLocalizedPath = (targetLang: string) => {
 
   /* Responsive */
   @media (max-width: 768px) {
-    .nav__menu {
-      gap: 1.5rem;
+    .nav__toggle {
+      display: flex;
     }
 
     .nav__right {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background-color: var(--bg-white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 1.5rem;
       gap: 1rem;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
     }
 
-    .nav__logo {
-      font-size: 1.125rem;
+    .nav__right--open {
+      max-height: 400px;
+      opacity: 1;
+      padding: 1rem 1.5rem;
+    }
+
+    .nav__menu {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .nav__item {
+      width: 100%;
+    }
+
+    .nav__link {
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .nav__language {
+      width: 100%;
+    }
+
+    .language-picker {
+      width: 100%;
     }
   }
 
   @media (max-width: 480px) {
-    .nav__content {
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .nav__right {
-      width: 100%;
-      justify-content: space-between;
-    }
-
-    .nav__menu {
-      gap: 1rem;
+    .nav__logo {
+      font-size: 1.125rem;
     }
 
     .language-picker {
-      min-width: 70px;
       font-size: 0.8rem;
     }
   }

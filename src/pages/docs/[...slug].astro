@@ -1,0 +1,218 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('docs');
+  return docs.map(doc => ({
+    params: { slug: doc.slug },
+    props: { doc },
+  }));
+}
+
+const { doc } = Astro.props;
+const { Content } = await doc.render();
+
+// Get all docs for sidebar navigation
+const allDocs = await getCollection('docs');
+const sortedDocs = allDocs.sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout lang="en" title={doc.data.title} description={doc.data.description || ''}>
+  <Navigation />
+  <div class="docs-container">
+    <aside class="docs-sidebar">
+      <nav>
+        <h3>Documentation</h3>
+        <ul>
+          {sortedDocs.map((d) => (
+            <li class={d.slug === doc.slug ? 'active' : ''}>
+              <a href={`/docs/${d.slug}`}>{d.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </aside>
+    <main class="docs-content">
+      <article>
+        <h1>{doc.data.title}</h1>
+        {doc.data.description && <p class="description">{doc.data.description}</p>}
+        <Content />
+      </article>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .docs-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .docs-sidebar {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+  }
+
+  .docs-sidebar h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--brand);
+  }
+
+  .docs-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .docs-sidebar li {
+    margin-bottom: 0.5rem;
+  }
+
+  .docs-sidebar a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+
+  .docs-sidebar a:hover {
+    background-color: var(--bg-secondary);
+  }
+
+  .docs-sidebar li.active a {
+    background-color: #e3f2fd;
+    color: var(--brand);
+    font-weight: 500;
+  }
+
+  .docs-content {
+    min-width: 0;
+  }
+
+  .docs-content article {
+    max-width: 800px;
+  }
+
+  .docs-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+
+  .docs-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .docs-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .docs-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .docs-content ul,
+  .docs-content ol {
+    margin-bottom: 1.5rem;
+  }
+
+  .docs-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .docs-content :global(h2) {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .docs-content :global(h2:first-of-type) {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .docs-content :global(h3) {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .docs-content :global(h4) {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .docs-content :global(p) {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .docs-content :global(ul),
+  .docs-content :global(ol) {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .docs-content :global(li) {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+
+  .docs-content :global(li p) {
+    margin-bottom: 0.5rem;
+  }
+
+  .docs-content :global(hr) {
+    margin: 2.5rem 0;
+    border: none;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .docs-content :global(blockquote) {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid var(--brand);
+    background-color: var(--bg-secondary);
+  }
+
+  .docs-content :global(code) {
+    background-color: var(--bg-secondary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .docs-content :global(pre) {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  .docs-content :global(strong) {
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 768px) {
+    .docs-container {
+      grid-template-columns: 1fr;
+    }
+
+    .docs-sidebar {
+      position: static;
+    }
+  }
+</style>

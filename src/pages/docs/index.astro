@@ -1,0 +1,87 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const allDocs = await getCollection('docs');
+const sortedDocs = allDocs.sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout lang="en" title="Documentation" description="Learn how to use Popaty to manage your properties effectively">
+  <Navigation />
+  <div class="docs-home">
+    <header class="docs-header">
+      <h1>Popaty Documentation</h1>
+      <p>Complete guide to managing your properties</p>
+    </header>
+    
+    <div class="docs-grid">
+      {sortedDocs.map((doc) => (
+        <a href={`/docs/${doc.slug}`} class="doc-card">
+          <h3>{doc.data.title}</h3>
+          {doc.data.description && <p>{doc.data.description}</p>}
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .docs-home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .docs-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .docs-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .docs-header p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+  }
+
+  .docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .doc-card {
+    padding: 2rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    background: var(--bg-white);
+  }
+
+  .doc-card:hover {
+    border-color: var(--brand);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .doc-card h3 {
+    color: var(--brand);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .doc-card p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+</style>
