@@ -70,7 +70,7 @@ export const ui = {
     'features.trust.title': 'Confiance & Transparence',
     'features.trust.description': 'Les journaux d\'audit immuables enregistrent chaque action de façon permanente. Voyez exactement qui a modifié quoi et quand pour la résolution des litiges.',
     'features.mobile.title': 'Design Mobile First',
-    'features.mobile.description': 'PWA avec capacités hors ligne. Installez directement sur l\'écran d\'accueil de votre téléphone et travaillez même sans connexion stable.',
+    'features.mobile.description': 'Application (PWA) avec capacités hors ligne. Installez directement sur l\'écran d\'accueil de votre téléphone et travaillez même sans connexion stable.',
     'pricing.title': 'Tarification Simple',
     'pricing.subtitle': 'Vos gestionnaires, conjoints et comptables ne paient jamais. Seul le propriétaire s\'abonne.',
     'pricing.free': 'Gratuit',
