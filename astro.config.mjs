@@ -19,7 +19,7 @@ export default defineConfig({
                 context: "client",
                 access: "public",
                 type: "string",
-                default: 'G-G0SKFG01NH'
+                default: 'G-EPSPSN1888'
             }
         }
     }

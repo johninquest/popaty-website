@@ -1,9 +1,6 @@
 ---
 // src/components/CookieConsent.astro
-import { getLangFromUrl, useTranslations } from '../i18n';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+// Remove the unused import - no lang/t variables used in this component
 ---
 
 <div id="cookie-consent" class="cookie-consent" style="display: none;">
