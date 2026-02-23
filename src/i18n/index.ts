@@ -18,7 +18,7 @@ export const ui = {
     'nav.getStarted': 'Get Started',
     'hero.title': 'Popaty',
     'hero.tagline': 'Property rent & expense manager',
-    'hero.description': 'A simple app for DIY landlords and property managers. Stop wrestling with spreadsheets and track rent payments in seconds.',
+    'hero.description': 'Simple rent tracking for landlords. Ditch the spreadsheets.',
     'hero.cta.primary': 'Request A Demo',
     'hero.cta.secondary': 'View Demo',
     'features.title': 'Key Features',
